@@ -1,0 +1,116 @@
+<!--
+edX Pattern Library: Boilerplate HTML Template: Header + Footer
+
+NOTES:
+
+* base template with the additon of how to handle an app-centric header/footer semantically.
+* base template with the additon of how to handle different types of navigation (user vs. app-centric).
+* base template with addition of how to start organizing main vs. supplementary/aside content
+* this assumes that the main and aside content are next to each other in the document's flow. This does not neccessarily have to be the case, but the same markup could be used in more complex cases.
+-->
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- always force latest IE rendering engine or request chrome rrame -->
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <base href="/">
+
+        <!-- place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- place touch icon in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- view/page metadata -->
+        <title></title>
+        <meta name="description" content="">
+
+        <!-- place primary assets (needed for or to support base view/page rendering) here -->
+        <link rel="stylesheet" href="css/main.min.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <body class="{app/site-section-name} {view-name} {stateful-class}">
+        <!-- CASE: if needed, provide a message for older versions of IE -->
+        <!--[if lt IE 9]>
+            <p class="alert alert-browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="nav-skip sr-only">
+            <a class="action-skip" href="#nav-app">Skip to the main navigation</a>
+            <a class="action-skip" href="#content-main">Skip to the main content</a>
+            <a class="action-skip" href="#content-aside">Skip to the aside content</a>
+        </div>
+
+        <!-- wrapper for all UI rendered within the page/view -->
+        <div class="wrapper-view">
+
+            <!-- NOTE: wrapper elements are only needed when they need to manage the grid or larger view/page layout aspects (e.g. spanning the whole viewport) -->
+            <div class="wrapper-header-app">
+                <header class="header-app" role="banner">
+                    <!-- example: app logo/title -->
+                    <h1 class="header-app-title">
+                        <a class="logo" href="{app or company home URL}">
+                            <img class="logo-img" src="{path/to/logo-img.svg}" alt="{app/site name}" />
+                            <!-- example: alternate app/site name (if not a graphical logo) -->
+                            <!-- {app/site name} -->
+                        </a>
+                    </h1>
+                    <!-- insert header content here -->
+
+                    <div class="wrapper-navigation">
+                        <nav class="nav-account" id="nav-account">
+                            <!-- NOTE: simplified user account nav example. This would be more complex in reality (with dropdowns, etc.) -->
+                            <a href="{url}">
+                                {username}
+                                <span class="sr-only">'s settings/profile</span>
+                            </a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+
+            <div class="wrapper-navigation">
+                <nav class="nav-app" id="nav-app">
+                    <a href="{url}">Course Home</a>
+                    <a href="{url}">Course Content</a>
+                    <a href="{url}">Discussions</a>
+                    <a href="{url}">Assignments</a>
+                    <a href="{url}">Assets &amp; Utilities</a>
+                    <a href="{url}">My Progress</a>
+                </nav>
+            </div>
+
+            <!-- NOTE: wrapper elements are only needed when they need to manage the grid or larger view/page layout aspects (e.g. spanning the whole viewport) -->
+            <div class="wrapper-content">
+                <main class="content-main" id="content-main">
+                    <!-- insert main content here -->
+                </main>
+
+                <aside class="content-aside" id="content-aside">
+                    <!-- insert aside/supplemental content here -->
+                </aside>
+            </div>
+
+            <!-- NOTE: wrapper elements are only needed when they need to manage the grid or larger view/page layout aspects (e.g. spanning the whole viewport) -->
+            <div class="wrapper-footer-app">
+                <footer class="footer-app" role="contentinfo">
+                    <!-- insert footer content here -->
+                </footer>
+            </div>
+        </div>
+
+        <!-- if needed, provide off-canvas DOM elements for global alert/message UI -->
+        <div class="wrapper-alerts" aria-hidden="true">
+            <!-- injected view-centric alerts are placed here -->
+        </div>
+
+        <!-- if needed, provide off-canvas DOM elements for dialogue/modal UI -->
+        <div class="wrapper-dialogue" aria-hidden="true">
+            <!-- injected modals/dialogues are placed here -->
+        </div>
+    </body>
+</html>

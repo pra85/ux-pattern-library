@@ -1,0 +1,54 @@
+<!--
+edX Pattern Library: Boilerplate HTML Template: Header + Footer
+
+NOTES:
+
+* base template with details on how to handle primary/secondary assets, metadata, and basic view-level UI (on canvas vs. conditional and off-canvas elements)
+-->
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- always force latest IE rendering engine or request chrome rrame -->
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <base href="/">
+
+        <!-- place favicon.ico in the root directory -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- place touch icon in the root directory -->
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <!-- view/page metadata -->
+        <title></title>
+        <meta name="description" content="">
+
+        <!-- place primary assets (needed for or to support base view/page rendering) here -->
+        <link rel="stylesheet" href="css/main.min.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+
+    <body class="{app/site-section-name} {view-name} {stateful-class}">
+        <!-- if needed, provide a message for older versions of IE -->
+        <!--[if lt IE 9]>
+            <p class="alert alert-browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- wrapper for all UI rendered within the page/view -->
+        <div class="wrapper-view">
+            <!-- page/view content is placed here -->
+        </div>
+
+        <!-- if needed, provide off-canvas DOM elements for global alert/message UI -->
+        <div class="wrapper-alerts" aria-hidden="true">
+            <!-- injected view-centric alerts are placed here -->
+        </div>
+
+        <!-- if needed, provide off-canvas DOM elements for dialogue/modal UI -->
+        <div class="wrapper-dialogue" aria-hidden="true">
+            <!-- injected modals/dialogues are placed here -->
+        </div>
+    </body>
+</html>
