@@ -14,20 +14,20 @@ NOTES:
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <base href="/">
+        <base href="{base path}">
 
         <!-- place favicon.ico in the root directory -->
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="{favicon path}">
         <!-- place touch icon in the root directory -->
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="apple-touch-icon" href="{icon path}">
 
         <!-- view/page metadata -->
-        <title></title>
+        <title>{page/view's title}</title>
         <meta name="description" content="">
 
         <!-- place primary assets (needed for or to support base view/page rendering) here -->
-        <link rel="stylesheet" href="css/main.min.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="{main css path}">
+        <script src="{main js path}"></script>
     </head>
 
     <body class="{app/site-section-name} {view-name} {stateful-class}">
@@ -44,7 +44,7 @@ NOTES:
                 <header class="header-app" role="banner">
                     <!-- example: app logo/title -->
                     <h1 class="header-app-title">
-                        <a class="logo" href="{app or company home URL}">
+                        <a class="logo" href="{app or company home url}">
                             <img class="logo-img" src="{path/to/logo-img.svg}" alt="{app/site name}" />
                             <!-- example: alternate app/site name (if not a graphical logo) -->
                             <!-- {app/site name} -->
@@ -76,13 +76,10 @@ NOTES:
             </div>
         </div>
 
-        <!-- if needed, provide off-canvas DOM elements for global alert/message UI -->
-        <div class="wrapper-alerts" aria-hidden="true">
+        <!-- if needed, wrapper for all off-canvas DOM elements -->
+        <div class="wrapper-off-view">
+            <!-- off-canvas navigation and elements -->
             <!-- injected view-centric alerts are placed here -->
-        </div>
-
-        <!-- if needed, provide off-canvas DOM elements for dialogue/modal UI -->
-        <div class="wrapper-dialogue" aria-hidden="true">
             <!-- injected modals/dialogues are placed here -->
         </div>
     </body>
